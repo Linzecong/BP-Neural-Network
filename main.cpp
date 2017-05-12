@@ -33,7 +33,7 @@ int main(){
     MyData->AddData(input3,output3);
     MyData->AddData(input4,output4);
 
-    NeuralNet* Brain=new NeuralNet(2,1,3,0.1,NeuralNet::ERRORSUM,true);//新建一个神经网络，输入神经元个数，输出神经元个数，隐藏层神经元个数，学习率，停止训练方法（次数或误差最小），是否输出误差值（用于观察是否收敛）
+    NeuralNet* Brain=new NeuralNet(2,1,4,0.1,NeuralNet::ERRORSUM,true);//新建一个神经网络，输入神经元个数，输出神经元个数，隐藏层神经元个数，学习率，停止训练方法（次数或误差最小），是否输出误差值（用于观察是否收敛）
     Brain->SetErrorThrehold(0.01);//设置误差，默认0.01
     //Brain->SetCount(10000);设置次数，默认10000
     Brain->Train(MyData);//通过数据，开始训练
